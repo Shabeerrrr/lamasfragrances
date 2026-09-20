@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LAMAS Fragrances — Launching November 2026</title>
+  <meta name="description"
+    content="LAMAS Fragrances — A premium niche attar brand rooted in Arabic fragrance tradition, founded in Mangaluru. Launching November 2026. Join the early-access list." />
+  <meta property="og:title" content="LAMAS Fragrances — Launching November 2026" />
+  <meta property="og:description"
+    content="A fragrance with a presence. Rooted in tradition, crafted for the present." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            lb: '#0B0A09', lb2: '#12100E', lb3: '#1A1511',
+            lt: '#F1ECE3', lm: '#A9A097', la: '#B29A78',
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['Manrope', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      background-color: #0B0A09;
+      color: #F1ECE3;
+      font-family: 'Manrope', system-ui, sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wordmark {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      letter-spacing: 0.32em;
+      line-height: 1;
+    }
+
+    .nav-link {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #A9A097;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #F1ECE3;
+    }
+
+    #site-header {
+      transition: background 0.45s ease, border-color 0.45s ease, backdrop-filter 0.45s ease;
+    }
+
+    #site-header.scrolled {
+      background: rgba(11, 10, 9, 0.88);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+    }
+
+    #mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.42s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    #mobile-menu.open {
+      transform: translateX(0);
+    }
+
+    .m-nav-link {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      color: #A9A097;
+      display: block;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+      transition: color 0.3s ease;
+    }
+
+    .m-nav-link:hover,
+    .m-nav-link.accent {
+      color: #F1ECE3;
+    }
+
+    .hero-grad {
+      background: linear-gradient(to bottom,
+          rgba(11, 10, 9, 0.38) 0%,
+          rgba(11, 10, 9, 0.18) 28%,
+          rgba(11, 10, 9, 0.52) 65%,
+          rgba(11, 10, 9, 1) 100%);
+    }
+
+    .btn-p {
+      display: inline-block;
+      background: #B29A78;
+      color: #0B0A09;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 0.95rem 2rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-p:hover {
+      background: #C4A886;
+    }
+
+    .btn-s {
+      display: inline-block;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #F1ECE3;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 0.9rem 1.75rem;
+      cursor: pointer;
+      transition: border-color 0.3s ease, color 0.3s ease;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-s:hover {
+      border-color: rgba(178, 154, 120, 0.55);
+      color: #B29A78;
+    }
+
+    .lamas-input {
+      width: 100%;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      color: #F1ECE3;
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      padding: 1rem 1.25rem;
+      outline: none;
+      transition: border-color 0.3s ease;
+      -webkit-appearance: none;
+    }
+
+    .lamas-input::placeholder {
+      color: #6B6258;
+    }
+
+    .lamas-input:focus {
+      border-color: rgba(178, 154, 120, 0.48);
+    }
+
+    .accent-line {
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: #B29A78;
+      margin-bottom: 1.75rem;
+    }
+
+    .frag-card {
+      overflow: hidden;
+    }
+
+    .frag-card-img {
+      transition: transform 0.85s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .frag-card:hover .frag-card-img {
+      transform: scale(1.045);
+    }
+
+    .df {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      line-height: 1.12;
+    }
+
+    .phil-row {
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+      padding: 1.6rem 0;
+    }
+
+    .phil-row:last-child {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-d1 {
+      transition-delay: 0.1s;
+    }
+
+    .reveal-d2 {
+      transition-delay: 0.2s;
+    }
+
+    .founder-ph {
+      background: linear-gradient(145deg, #1A1511 0%, #0F0D0B 100%);
+      border: 1px solid rgba(255, 255, 255, 0.055);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .frag-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.28em;
+      color: #B29A78;
+      font-weight: 300;
+    }
+
+    .form-ok {
+      display: none;
+    }
+
+    .form-ok.show {
+      display: block;
+    }
+
+    .sep {
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.055);
+      margin: 0;
+    }
+
+    .hbar {
+      display: block;
+      height: 1px;
+      background: #F1ECE3;
+      transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+    }
+
+    :focus-visible {
+      outline: 1px solid #B29A78;
+      outline-offset: 3px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card-overlay {
+      background: linear-gradient(to top, rgba(11, 10, 9, 0.75) 0%, rgba(11, 10, 9, 0) 55%);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+
+      .frag-card-img {
+        transition: none;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 px-5 sm:px-8 lg:px-14" role="banner">
+    <div class="max-w-7xl mx-auto flex items-center justify-between" style="height:64px;">
+      <a href="#" aria-label="LAMAS Fragrances — Return to top" class="flex flex-col items-start leading-none gap-0.5">
+        <span class="wordmark text-lt" style="font-size:1.2rem;">LAMAS</span>
+        <span
+          style="font-size:0.42rem;letter-spacing:0.38em;color:#A9A097;text-transform:uppercase;font-family:'Manrope',sans-serif;">Fragrances</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-7 lg:gap-9" aria-label="Main navigation">
+        <a href="#collection" class="nav-link">Fragrances</a>
+        <a href="#story" class="nav-link">Story</a>
+        <a href="#founder" class="nav-link">Founder</a>
+        <a href="#early-access"
+          style="font-size:0.68rem;letter-spacing:0.22em;font-weight:500;text-transform:uppercase;color:#B29A78;border:1px solid rgba(178,154,120,0.32);padding:0.45rem 1.1rem;transition:background 0.3s,color 0.3s;"
+          onmouseenter="this.style.background='rgba(178,154,120,0.1)'"
+          onmouseleave="this.style.background='transparent'">Early Access</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden flex flex-col justify-center gap-1.5 w-10 h-10 items-end"
+        aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="hbar w-6" id="hb1"></span>
+        <span class="hbar w-4" id="hb2"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 flex flex-col justify-center px-8" style="background:#0B0A09;"
+    aria-hidden="true" role="dialog" aria-label="Mobile navigation">
+    <button id="menu-close" aria-label="Close menu"
+      class="absolute top-5 right-6 w-10 h-10 flex items-center justify-center">
+      <i data-lucide="x" style="color:#A9A097;width:20px;height:20px;"></i>
+    </button>
+    <div class="mb-10">
+      <span class="wordmark text-lt" style="font-size:1.4rem;">LAMAS</span>
+    </div>
+    <nav aria-label="Mobile navigation links">
+      <a href="#collection" class="m-nav-link" data-close>Fragrances</a>
+      <a href="#story" class="m-nav-link" data-close>Story</a>
+      <a href="#founder" class="m-nav-link" data-close>Founder</a>
+      <a href="#early-access" class="m-nav-link accent" data-close
+        style="color:#B29A78;border-color:rgba(178,154,120,0.15);">Early Access</a>
+    </nav>
+    <p class="mt-10" style="font-size:0.58rem;letter-spacing:0.3em;color:#A9A097;text-transform:uppercase;">Launching
+      Soon — November 2026</p>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero" class="relative w-full flex items-end overflow-hidden"
+      style="min-height:100svh;min-height:100vh;" aria-label="LAMAS Fragrances hero">
+      <div class="absolute inset-0 overflow-hidden">
+        <img id="hero-img" src="lamasee.png"
+          alt="Premium dark glass attar perfume bottles resting on aged dark wood with warm directional lighting"
+          class="w-full h-full object-cover object-center" fetchpriority="high" />
+        <div class="hero-grad absolute inset-0" aria-hidden="true"></div>
+      </div>
+      <div class="relative z-10 w-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-14 pb-16 sm:pb-20 md:pb-28">
+        <div style="max-width:520px;">
+          <p class="mb-6"
+            style="font-size:0.58rem;letter-spacing:0.38em;color:#B29A78;text-transform:uppercase;font-weight:500;">
+            LAMAS FRAGRANCES</p>
+          <h1 class="df mb-5" style="font-size:clamp(2.6rem,9vw,5.25rem);color:#F1ECE3;">A fragrance<br />with a
+            presence.</h1>
+          <p class="mb-8"
+            style="font-size:0.88rem;color:#A9A097;line-height:1.85;letter-spacing:0.04em;font-weight:300;max-width:30ch;">
+            Rooted in tradition.<br />Crafted for the present.</p>
+          <p class="mb-9"
+            style="font-size:0.6rem;letter-spacing:0.28em;color:#B29A78;text-transform:uppercase;font-weight:500;">
+            Launching Soon &mdash; November 2026</p>
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <a href="#early-access" class="btn-p">Get Early Access</a>
+            <a href="#collection" class="btn-s">Explore the Fragrances</a>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-8 right-5 sm:right-8 flex flex-col items-center gap-2 select-none" aria-hidden="true">
+        <span
+          style="font-size:0.5rem;letter-spacing:0.28em;color:#A9A097;text-transform:uppercase;writing-mode:vertical-rl;">Scroll</span>
+        <div style="width:1px;height:36px;background:linear-gradient(to bottom,#A9A097,transparent);"></div>
+      </div>
+    </section>
+
+
+    <!-- EARLY ACCESS -->
+    <section id="early-access" class="py-20 sm:py-28 md:py-36 px-5 sm:px-8 lg:px-14" style="background:#0B0A09;"
+      aria-label="Early access sign-up">
+      <div class="max-w-7xl mx-auto">
+        <div class="max-w-xl mx-auto text-center">
+          <span class="accent-line mx-auto"></span>
+          <h2 class="df mb-5 reveal" style="font-size:clamp(1.9rem,6vw,3.4rem);">Be there from<br />the beginning.</h2>
+          <p class="mb-10 reveal reveal-d1"
+            style="font-size:0.84rem;color:#A9A097;line-height:1.95;letter-spacing:0.04em;max-width:44ch;margin-left:auto;margin-right:auto;">
+            LAMAS is arriving soon. Join the early-access list to be among the first to experience our opening
+            collection and receive launch updates.
+          </p>
+          <form id="form-1" novalidate aria-label="Early access email signup" class="reveal reveal-d1">
+            <div class="flex flex-col sm:flex-row">
+              <div class="flex-1">
+                <label for="ea-email" class="sr-only">Enter your email address</label>
+                <input type="email" id="ea-email" name="email" class="lamas-input" placeholder="Enter your email"
+                  autocomplete="email" required aria-required="true" aria-describedby="ea-err" />
+              </div>
+              <button type="submit" class="btn-p mt-3 sm:mt-0">Get Early Access</button>
+            </div>
+            <p id="ea-err" class="mt-2 text-left" style="font-size:0.7rem;color:#B29A78;display:none;" role="alert"
+              aria-live="polite"></p>
+          </form>
+          <div id="form-1-ok" class="form-ok mt-6" role="status" aria-live="polite">
+            <p class="df" style="font-size:1.15rem;font-style:italic;color:#B29A78;letter-spacing:0.06em;">You&rsquo;re
+              on the list. We&rsquo;ll be in touch.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="sep" />
+
+
+    <!-- COLLECTION -->
+    <section id="collection" class="py-20 sm:py-28 md:py-36 px-5 sm:px-8 lg:px-14" style="background:#0B0A09;"
+      aria-label="Fragrance collection">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-14 md:mb-20 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+          <div>
+            <span class="accent-line"></span>
+            <h2 class="df reveal" style="font-size:clamp(1.7rem,5vw,2.9rem);">The Opening Collection</h2>
+          </div>
+          <p class="reveal"
+            style="font-size:0.78rem;color:#A9A097;line-height:1.85;letter-spacing:0.06em;max-width:28ch;">Three
+            expressions. Three moods.<br />One LAMAS signature.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 lg:gap-8">
+
+          <!-- MUWAHHOD -->
+          <article class="frag-card reveal" aria-label="MUWAHHOD — Arabic Attar fragrance">
+            <div class="relative overflow-hidden" style="aspect-ratio:3/4;">
+              <img src="https://images.unsplash.com/photo-1541704328070-20bf4601ae3e?auto=format&fit=crop&w=700&q=82"
+                alt="MUWAHHOD — dark attar bottle on weathered wood with warm amber light and deep shadows"
+                class="frag-card-img w-full h-full object-cover object-center" loading="lazy" />
+              <div class="card-overlay absolute inset-0" aria-hidden="true"></div>
+              <span class="frag-num absolute top-5 left-5">01</span>
+              <span class="absolute bottom-5 right-5"
+                style="font-size:0.55rem;letter-spacing:0.28em;color:rgba(178,154,120,0.85);text-transform:uppercase;">Arabic
+                Attar</span>
+            </div>
+            <div class="pt-6">
+              <h3 class="df mb-2" style="font-size:1.8rem;color:#F1ECE3;letter-spacing:0.06em;">MUWAHHOD</h3>
+              <p class="mb-4" style="font-size:0.78rem;color:#A9A097;line-height:1.85;max-width:32ch;">A deep expression
+                of Arabic fragrance tradition, shaped around warmth, depth and character.</p>
+              <p class="df" style="font-size:0.98rem;font-style:italic;color:#B29A78;">Tradition, distilled.</p>
+            </div>
+          </article>
+
+          <!-- NOURA -->
+          <article class="frag-card reveal reveal-d1" aria-label="NOURA — Floral fragrance">
+            <div class="relative overflow-hidden" style="aspect-ratio:3/4;">
+              <img src="https://images.unsplash.com/photo-1490750967868-88df5691cc2d?auto=format&fit=crop&w=700&q=82"
+                alt="NOURA — elegant bottle among deep muted dark rose petals with soft natural lighting"
+                class="frag-card-img w-full h-full object-cover object-center" loading="lazy" />
+              <div class="card-overlay absolute inset-0" aria-hidden="true"></div>
+              <span class="frag-num absolute top-5 left-5">02</span>
+              <span class="absolute bottom-5 right-5"
+                style="font-size:0.55rem;letter-spacing:0.28em;color:rgba(178,154,120,0.85);text-transform:uppercase;">Floral</span>
+            </div>
+            <div class="pt-6">
+              <h3 class="df mb-2" style="font-size:1.8rem;color:#F1ECE3;letter-spacing:0.06em;">NOURA</h3>
+              <p class="mb-4" style="font-size:0.78rem;color:#A9A097;line-height:1.85;max-width:32ch;">A delicate floral
+                composition balanced with warmth and depth, created for an understated elegance.</p>
+              <p class="df" style="font-size:0.98rem;font-style:italic;color:#B29A78;">Where softness leaves an
+                impression.</p>
+            </div>
+          </article>
+
+          <!-- SAVRÉ -->
+          <article class="frag-card reveal reveal-d2" aria-label="SAVRÉ — Fruity unisex fragrance">
+            <div class="relative overflow-hidden" style="aspect-ratio:3/4;">
+              <img src="https://images.unsplash.com/photo-1597851960993-89f0b4bc4f61?auto=format&fit=crop&w=700&q=82"
+                alt="SAVRÉ — refined bottle with dark citrus elements and rich natural shadows on dark stone"
+                class="frag-card-img w-full h-full object-cover object-center" loading="lazy" />
+              <div class="card-overlay absolute inset-0" aria-hidden="true"></div>
+              <span class="frag-num absolute top-5 left-5">03</span>
+              <span class="absolute bottom-5 right-5"
+                style="font-size:0.55rem;letter-spacing:0.28em;color:rgba(178,154,120,0.85);text-transform:uppercase;">Fruity
+                &mdash; Unisex</span>
+            </div>
+            <div class="pt-6">
+              <h3 class="df mb-2" style="font-size:1.8rem;color:#F1ECE3;letter-spacing:0.06em;">SAVR&Eacute;</h3>
+              <p class="mb-4" style="font-size:0.78rem;color:#A9A097;line-height:1.85;max-width:32ch;">A refined fruity
+                expression where brightness meets a deeper, more sophisticated base.</p>
+              <p class="df" style="font-size:0.98rem;font-style:italic;color:#B29A78;">Freshness, with depth.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- BRAND STATEMENT -->
+    <section id="story" class="py-24 sm:py-32 md:py-44 px-5 sm:px-8 lg:px-14 relative overflow-hidden"
+      style="background:#12100E;" aria-label="Brand statement">
+      <div class="absolute inset-0 opacity-8 pointer-events-none" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1610461888750-10bce601de3a?auto=format&fit=crop&w=1200&q=50" alt=""
+          class="w-full h-full object-cover object-center" loading="lazy" />
+        <div style="position:absolute;inset:0;background:rgba(18,16,14,0.82);"></div>
+      </div>
+      <div class="relative z-10 max-w-7xl mx-auto">
+        <div style="max-width:860px;">
+          <h2 class="df mb-12 md:mb-16 reveal"
+            style="font-size:clamp(2.1rem,7.5vw,5rem);color:#F1ECE3;line-height:1.08;">
+            Not made to fill a room.<br />
+            <span style="color:#6B6258;">Made to leave a presence.</span>
+          </h2>
+          <div class="flex flex-col md:flex-row gap-10 md:gap-28">
+            <div class="hidden md:block" aria-hidden="true" style="padding-top:0.25rem;flex-shrink:0;">
+              <div style="width:1px;height:72px;background:linear-gradient(to bottom,#B29A78,transparent);"></div>
+            </div>
+            <p class="reveal"
+              style="font-size:0.9rem;color:#A9A097;line-height:2;letter-spacing:0.04em;max-width:54ch;">
+              LAMAS explores fragrance through tradition, character and simplicity &mdash; creating scents intended to
+              become part of the moments people remember.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- BRAND PHILOSOPHY -->
+    <section class="py-20 sm:py-28 md:py-36 px-5 sm:px-8 lg:px-14" style="background:#0B0A09;"
+      aria-label="Brand philosophy">
+      <div class="max-w-7xl mx-auto">
+        <div style="max-width:640px;margin:0 auto;">
+          <span class="accent-line"></span>
+          <p class="mb-10 reveal"
+            style="font-size:0.58rem;letter-spacing:0.38em;color:#A9A097;text-transform:uppercase;">What guides us</p>
+          <dl>
+            <div class="phil-row reveal">
+              <div class="flex gap-7">
+                <span class="frag-num pt-0.5" aria-hidden="true">01</span>
+                <div>
+                  <dt class="mb-1.5"
+                    style="font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:#F1ECE3;font-weight:600;">
+                    Tradition</dt>
+                  <dd style="font-size:0.8rem;color:#A9A097;line-height:1.85;">Inspired by the richness of Arabic
+                    fragrance culture.</dd>
+                </div>
+              </div>
+            </div>
+            <div class="phil-row reveal">
+              <div class="flex gap-7">
+                <span class="frag-num pt-0.5" aria-hidden="true">02</span>
+                <div>
+                  <dt class="mb-1.5"
+                    style="font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:#F1ECE3;font-weight:600;">
+                    Character</dt>
+                  <dd style="font-size:0.8rem;color:#A9A097;line-height:1.85;">Each fragrance is designed to have its
+                    own identity.</dd>
+                </div>
+              </div>
+            </div>
+            <div class="phil-row reveal">
+              <div class="flex gap-7">
+                <span class="frag-num pt-0.5" aria-hidden="true">03</span>
+                <div>
+                  <dt class="mb-1.5"
+                    style="font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:#F1ECE3;font-weight:600;">
+                    Simplicity</dt>
+                  <dd style="font-size:0.8rem;color:#A9A097;line-height:1.85;">Luxury does not need to be loud.</dd>
+                </div>
+              </div>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <hr class="sep" />
+
+
+    <!-- FOUNDER -->
+    <section id="founder" class="py-20 sm:py-28 md:py-36 px-5 sm:px-8 lg:px-14" style="background:#12100E;"
+      aria-label="Founders story">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 xl:gap-28 items-start">
+
+          <div class="w-full lg:w-5/12 reveal" style="flex-shrink:0;">
+            <div class="founder-ph w-full" style="aspect-ratio:4/5;max-height:600px;max-width:480px;">
+              <i data-lucide="user" style="width:36px;height:36px;color:#B29A78;opacity:0.28;"></i>
+              <p style="font-size:0.55rem;letter-spacing:0.3em;color:#A9A097;text-transform:uppercase;opacity:0.5;">
+                Portrait</p>
+            </div>
+          </div>
+
+          <div class="w-full lg:w-7/12 lg:pt-2">
+            <span class="accent-line"></span>
+            <p class="mb-3 reveal"
+              style="font-size:0.58rem;letter-spacing:0.38em;color:#A9A097;text-transform:uppercase;">The Founders</p>
+            <h2 class="df mb-8 reveal" style="font-size:clamp(1.7rem,4.5vw,2.8rem);">The Story<br />Behind LAMAS</h2>
+            <p class="mb-10 reveal"
+              style="font-size:0.88rem;color:#A9A097;line-height:2;letter-spacing:0.03em;max-width:50ch;">
+              LAMAS Fragrances was founded by Muhammad Samreed and Shabeer Ahammad in Mangaluru with a simple idea: to
+              create fragrances that carry character, identity and a sense of tradition while remaining relevant to the
+              modern wearer.
+            </p>
+            <div class="flex flex-col gap-5 mb-10 reveal">
+              <div>
+                <p class="df" style="font-size:1.3rem;color:#F1ECE3;letter-spacing:0.05em;">Muhammad Samreed</p>
+                <p
+                  style="font-size:0.56rem;letter-spacing:0.28em;color:#B29A78;text-transform:uppercase;margin-top:4px;">
+                  Co-Founder</p>
+              </div>
+              <div>
+                <p class="df" style="font-size:1.3rem;color:#F1ECE3;letter-spacing:0.05em;">Shabeer Ahammad</p>
+                <p
+                  style="font-size:0.56rem;letter-spacing:0.28em;color:#B29A78;text-transform:uppercase;margin-top:4px;">
+                  Co-Founder</p>
+              </div>
+            </div>
+            <div class="reveal" style="border-top:1px solid rgba(255,255,255,0.07);padding-top:1.5rem;">
+              <div class="flex items-center gap-2">
+                <i data-lucide="map-pin" style="width:13px;height:13px;color:#B29A78;flex-shrink:0;"
+                  aria-hidden="true"></i>
+                <p style="font-size:0.62rem;letter-spacing:0.22em;color:#A9A097;text-transform:uppercase;">Founded in
+                  Mangaluru, India</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- LAUNCH -->
+    <section class="py-24 sm:py-32 md:py-44 px-5 sm:px-8 lg:px-14 text-center" style="background:#1A1511;"
+      aria-label="Launch announcement">
+      <div class="max-w-3xl mx-auto">
+        <span class="accent-line mx-auto"></span>
+        <p class="mb-5 reveal" style="font-size:0.58rem;letter-spacing:0.38em;color:#A9A097;text-transform:uppercase;">
+          Coming Soon</p>
+        <h2 class="df mb-6 reveal" style="font-size:clamp(1.4rem,4vw,2.2rem);color:#F1ECE3;">LAMAS is almost here.</h2>
+        <p class="df reveal"
+          style="font-size:clamp(3.5rem,16vw,9.5rem);color:#F1ECE3;line-height:0.95;letter-spacing:-0.01em;opacity:0.9;">
+          November<br /><span style="font-size:0.62em;letter-spacing:0.08em;color:#B29A78;">2026</span></p>
+        <p class="mt-10 mb-12 reveal" style="font-size:0.82rem;color:#A9A097;line-height:1.85;letter-spacing:0.06em;">
+          The first collection is coming soon.</p>
+        <a href="#early-access" class="btn-p reveal">Join Early Access</a>
+      </div>
+    </section>
+
+
+    <!-- FINAL CTA -->
+    <section class="py-20 sm:py-28 md:py-36 px-5 sm:px-8 lg:px-14" style="background:#0B0A09;"
+      aria-label="Final call to action">
+      <div class="max-w-7xl mx-auto">
+        <div style="max-width:580px;">
+          <span class="accent-line"></span>
+          <h2 class="df mb-5 reveal" style="font-size:clamp(1.7rem,5vw,3rem);">Be among the first<br />to experience
+            LAMAS.</h2>
+          <p class="mb-10 reveal reveal-d1"
+            style="font-size:0.84rem;color:#A9A097;line-height:1.95;letter-spacing:0.04em;max-width:44ch;">
+            Join the early-access list and receive the first word when the collection launches.
+          </p>
+          <form id="form-2" novalidate aria-label="Final early access signup" class="reveal reveal-d1">
+            <div class="flex flex-col sm:flex-row">
+              <div class="flex-1">
+                <label for="fa-email" class="sr-only">Your email address</label>
+                <input type="email" id="fa-email" name="email" class="lamas-input" placeholder="Your email address"
+                  autocomplete="email" required aria-required="true" aria-describedby="fa-err" />
+              </div>
+              <button type="submit" class="btn-p mt-3 sm:mt-0">Join LAMAS</button>
+            </div>
+            <p id="fa-err" class="mt-2" style="font-size:0.7rem;color:#B29A78;display:none;" role="alert"
+              aria-live="polite"></p>
+          </form>
+          <div id="form-2-ok" class="form-ok mt-6" role="status" aria-live="polite">
+            <p class="df" style="font-size:1.15rem;font-style:italic;color:#B29A78;letter-spacing:0.06em;">Welcome to
+              LAMAS. You&rsquo;re on the early-access list.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer style="background:#0B0A09;border-top:1px solid rgba(255,255,255,0.055);" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-14 py-14 md:py-20">
+      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-10">
+        <div>
+          <p class="wordmark mb-1" style="font-size:1.25rem;color:#F1ECE3;">LAMAS</p>
+          <p
+            style="font-size:0.42rem;letter-spacing:0.38em;color:#A9A097;text-transform:uppercase;margin-bottom:0.6rem;">
+            Fragrances</p>
+          <p style="font-size:0.7rem;color:#6B6258;letter-spacing:0.08em;">Mangaluru, India</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <ul class="flex flex-col gap-3">
+            <li><a href="#collection" class="nav-link">Fragrances</a></li>
+            <li><a href="#story" class="nav-link">Story</a></li>
+            <li><a href="#founder" class="nav-link">Founder</a></li>
+            <li><a href="#early-access" class="nav-link">Early Access</a></li>
+            <li>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                class="nav-link inline-flex items-center gap-1.5"
+                aria-label="Follow LAMAS Fragrances on Instagram (opens in new tab)">
+                Instagram <i data-lucide="arrow-up-right" style="width:10px;height:10px;" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="mt-14 pt-5" style="border-top:1px solid rgba(255,255,255,0.04);">
+        <p style="font-size:0.62rem;color:#A9A097;letter-spacing:0.1em;opacity:0.5;">&copy; 2026 LAMAS Fragrances. All
+          rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    /* Header scroll */
+    const hdr = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      hdr.classList.toggle('scrolled', window.scrollY > 55);
+    }, { passive: true });
+
+    /* Mobile menu */
+    const menuBtn = document.getElementById('menu-btn');
+    const menuClose = document.getElementById('menu-close');
+    const mMenu = document.getElementById('mobile-menu');
+    const hb1 = document.getElementById('hb1');
+    const hb2 = document.getElementById('hb2');
+    let menuOpen = false;
+
+    function openMenu() {
+      menuOpen = true;
+      mMenu.classList.add('open');
+      mMenu.setAttribute('aria-hidden', 'false');
+      menuBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+      hb1.style.transform = 'rotate(45deg) translate(3.5px, 3.5px)';
+      hb2.style.cssText += ';transform:rotate(-45deg) translate(3.5px,-3.5px);width:24px;';
+    }
+    function closeMenu() {
+      menuOpen = false;
+      mMenu.classList.remove('open');
+      mMenu.setAttribute('aria-hidden', 'true');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      hb1.style.transform = '';
+      hb2.style.transform = '';
+      hb2.style.width = '16px';
+    }
+
+    menuBtn.addEventListener('click', () => menuOpen ? closeMenu() : openMenu());
+    menuClose.addEventListener('click', closeMenu);
+    document.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && menuOpen) closeMenu(); });
+
+    /* Scroll reveal */
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduced) {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+      }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+    }
+
+    /* Hero parallax */
+    if (!reduced) {
+      const heroImg = document.getElementById('hero-img');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY < window.innerHeight * 1.2) {
+          heroImg.style.transform = `translateY(${window.scrollY * 0.22}px)`;
+        }
+      }, { passive: true });
+    }
+
+    /* Smooth scroll */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function (e) {
+        const id = this.getAttribute('href');
+        if (id === '#') return;
+        const target = document.querySelector(id);
+        if (!target) return;
+        e.preventDefault();
+        const top = target.getBoundingClientRect().top + window.scrollY - hdr.offsetHeight;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+
+    /* Forms */
+    const emailRx = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+    function bindForm(formId, okId, inputId, errId) {
+      const form = document.getElementById(formId);
+      const ok = document.getElementById(okId);
+      const input = document.getElementById(inputId);
+      const err = document.getElementById(errId);
+      if (!form) return;
+      form.addEventListener('submit', ev => {
+        ev.preventDefault();
+        err.style.display = 'none';
+        const val = input.value.trim();
+        if (!val) { err.textContent = 'Please enter your email address.'; err.style.display = 'block'; input.focus(); return; }
+        if (!emailRx.test(val)) { err.textContent = 'Please enter a valid email address.'; err.style.display = 'block'; input.focus(); return; }
+        form.style.display = 'none';
+        ok.classList.add('show');
+      });
+    }
+
+    bindForm('form-1', 'form-1-ok', 'ea-email', 'ea-err');
+    bindForm('form-2', 'form-2-ok', 'fa-email', 'fa-err');
+  </script>
+
+</body>
+
+</html>
